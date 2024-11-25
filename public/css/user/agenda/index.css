@@ -1,0 +1,195 @@
+/* Header Styles */
+.page-header {
+    background: linear-gradient(120deg, #2c3e50, #3498db);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.header-content {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.breadcrumb-item {
+    color: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 0.5rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.breadcrumb-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: white;
+}
+
+.breadcrumb-item.active {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    flex: 0 0 60%;
+    position: relative;
+    background: white;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.search-icon {
+    color: #27ae60;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: calc(100% - 30px);
+    font-size: 1rem;
+}
+
+.info-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.stat-item i {
+    color: #27ae60;
+}
+
+/* Table Styles */
+.table-wrapper {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.agenda-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.agenda-table thead {
+    background: #f8f9fa;
+}
+
+.agenda-table th {
+    padding: 1.2rem 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.agenda-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-top: 1px solid #f1f1f1;
+}
+
+/* Content Styles */
+.agenda-title, .date-info, .time-info, .location-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.agenda-title i {
+    font-size: 1.2rem;
+    color: #27ae60;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-state img {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: #666;
+    margin: 0;
+}
+
+/* Hover Effects */
+.agenda-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.agenda-table tbody tr:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-box {
+        flex: 0 0 100%;
+    }
+    
+    .agenda-table {
+        font-size: 0.9rem;
+    }
+} 

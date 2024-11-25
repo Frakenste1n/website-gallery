@@ -1,0 +1,60 @@
+/* Dashboard container style */
+.admin-container {
+    padding: 20px;
+    background-color: #f8f9fc;
+}
+
+/* Card container style */
+.card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header icons and text style */
+.card h5 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #5a5c69;
+}
+
+.card h5 i {
+    margin-right: 8px;
+}
+
+/* Card value (total number) style */
+.card-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4e73df;
+}
+
+/* Border color customization */
+.border-left-primary {
+    border-left: 4px solid #4e73df !important;
+}
+
+.border-left-success {
+    border-left: 4px solid #1cc88a !important;
+}
+
+.border-left-info {
+    border-left: 4px solid #36b9cc !important;
+}
+
+.border-left-warning {
+    border-left: 4px solid #f6c23e !important;
+}
+
+/* Responsive spacing for cards */
+@media (max-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 15px;
+    }
+}

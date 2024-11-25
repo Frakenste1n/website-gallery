@@ -1,0 +1,146 @@
+/* Reset dan variabel */
+:root {
+    --primary: #2c3e50;
+    --secondary: #34495e;
+    --success: #27ae60;
+    --info: #3498db;
+    --warning: #f1c40f;
+    --danger: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --sidebar-width: 250px;
+}
+
+/* Layout dasar */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--light);
+}
+
+.admin-info {
+    flex: 1;
+    color: var(--light);
+}
+
+.admin-name {
+    font-weight: 600;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.admin-role {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Menu navigasi */
+.nav-menu {
+    padding: 20px 0;
+}
+
+.menu-item {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--light);
+    padding-left: 30px;
+}
+
+.menu-item i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 20px;
+    background: #f8f9fa;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    transition: margin-left 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Additional styling for responsiveness and polish */
+.sidebar .menu-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.sidebar .sidebar-header {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.sidebar .menu-item i {
+    font-size: 1.1rem;
+}
+
+.main-content h1, .main-content h2, .main-content h3 {
+    color: var(--dark);
+    font-weight: 600;
+}
